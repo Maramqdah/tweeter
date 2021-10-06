@@ -1,49 +1,69 @@
-.logo-header{
-  display: flex;
-  justify-content: space-between;
-  background-color: #4056A1;
-  height: 120px;
-  width: 100%;
-  color: #FFFFFF;
-  padding: 1.5em;
+.logo-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4056A1;
+    height: 120px;
+    width: 100%;
+    color: #FFFFFF;
+    padding: 1.5em;
+    position: fixed;
+    z-index: 1;
+}
 
-  position: fixed;
-  z-index: 1;
+.red {
+    color: red;
+}
 
-  
+.container {
+    display: flex;
+    flex-direction: column;
+    /* //justify-content: flex-end; */
+    align-items: center;
 }
-.red{
-  color: red;
-}
-.container{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
 
+.write {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    font-size: x-large;
 }
-.write{
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 0;
-  font-size: x-large;
-  
+
+.logo {
+    font-size: xx-large;
+    font-family: Bungee, sans-serif;
 }
-.logo{
-  font-size: xx-large;
-  font-family:Bungee, sans-serif;
+
+.bold {
+    font-weight: 600;
 }
-.bold{
-  font-weight: 600;
-}
+
 .avatar {
-  display: flex;
-  /* position: static; */
-  justify-content: center;
-}
-.avatar-name{
-  display: flex;
-  justify-content: center;
+    display: flex;
+    /* position: static; */
+    justify-content: center;
 }
 
+.avatar-name {
+    display: flex;
+    justify-content: center;
+}
 
+.tweet-header {
+    display: flex;
+    flex-direction: row;
+}
 
+.item-at-name {
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
+}
+
+hr {
+    width: 90%;
+    color: #545149;
+    border: solid;
+}
+
+.tweet-footer {
+    display: flex;
+}

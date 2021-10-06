@@ -19,8 +19,6 @@ body {
   background-color: #f4f1ec;
   /* font-family: Source Sans Pro, sans-serif; */
 }
-
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -30,5 +28,14 @@ body {
    align-items: center;
    background-color: #f4f1ec;
    margin-top: 150px;
+ }
 
+ article .tweet-header{
+   background-color: #f4f1ec;
+ }
+ article .tweet-footer{
+   background-color: #f4f1ec;
+ }
+ article{
+   border: solid;
  }

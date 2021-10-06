@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // --- our code goes here ---
-  console.log( "ready!" );
+  //console.log( "ready!" );
   
   $('#tweet-textarea').keyup(() =>{ 
     const tweetlength= $('#tweet-textarea').val().length;
@@ -8,6 +8,4 @@ $(document).ready(function() {
     $('.counter').text(140-tweetlength);
 
   })
- 
-  
 });
