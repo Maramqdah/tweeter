@@ -8,5 +8,5 @@ $(document).ready(function() {
         $('.counter').text(140 - tweetlength);
 
     })
-    $(selector).mouseenter(handlerIn).mouseleave(handlerOut);
+
 });

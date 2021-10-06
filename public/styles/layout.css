@@ -3,39 +3,58 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
+
 
 /*
  * Global layout stuff
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  /* font-family: Source Sans Pro, sans-serif; */
+    color: #545149;
+    background-color: #f4f1ec;
+    /* font-family: Source Sans Pro, sans-serif; */
 }
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- main{
-   display: flex;
-   width: 90%;
-   align-items: center;
-   background-color: #f4f1ec;
-   margin-top: 150px;
- }
 
- article .tweet-header{
-   background-color: #f4f1ec;
- }
- article .tweet-footer{
-   background-color: #f4f1ec;
- }
- article{
-   border: solid;
- }
+main {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    background-color: #f4f1ec;
+    margin-top: 150px;
+}
+
+article .tweet-header {
+    background-color: #f4f1ec;
+}
+
+article .tweet-footer {
+    background-color: #f4f1ec;
+}
+
+article {
+    border: solid;
+    transition: box-shadow .3s;
+}
+
+article:hover {
+    box-shadow: 0 0 11px rgba(40, 40, 40, .2);
+}
+
+.footer-elements i:hover {
+    color: rgb(211, 148, 236);
+}

@@ -8,6 +8,8 @@
     padding: 1.5em;
     position: fixed;
     z-index: 1;
+    top: 0;
+    left: 0;
 }
 
 .red {
@@ -76,8 +78,8 @@ hr {
     display: flex;
 }
 
-.days-counte {
+.days-counter {
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: first baseline;
     display: flex;
 }
