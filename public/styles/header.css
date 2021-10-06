@@ -1,9 +1,8 @@
-#main-header{
-  height: 400px;
-  width: 100%;
-  position: relative;
-  z-index: 0;
-  top: 120px;
-  background-color: #8c7500;
-
+#main-header {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    top: 120px;
+    background-color: #8c7500;
 }

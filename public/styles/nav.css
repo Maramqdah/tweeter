@@ -51,19 +51,18 @@
 
 .tweet-header {
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
 
-.item-at-name {
+.handle {
     flex-grow: 1;
     justify-content: flex-end;
     display: flex;
 }
 
 hr {
-    width: 90%;
     color: #545149;
-    border: solid;
+    border: 1px solid;
 }
 
 .tweet-footer {
@@ -78,7 +77,7 @@ hr {
     display: flex;
 }
 
-.days-counter {
+.timeago {
     flex-grow: 1;
     justify-content: first baseline;
     display: flex;

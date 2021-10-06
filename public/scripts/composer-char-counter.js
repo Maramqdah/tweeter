@@ -8,5 +8,6 @@ $(document).ready(function() {
         $('.counter').text(140 - tweetlength);
 
     })
+    timeago.render(document.querySelectorAll('.timeago'));
 
 });

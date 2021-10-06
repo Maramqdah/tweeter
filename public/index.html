@@ -28,10 +28,13 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//unpkg.com/timeago.js"></script>
+
+
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script defer type="text/javascript" src="/scripts/client.js"></script>
+    <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -57,47 +60,18 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section>
+        <section class="main-tweet-container">
             <!-- <h2>Compose Tweet</h2> -->
             <form method="POST" action="/tweets" class="new-tweet-form">
-
-                <div class="main-tweet-container">
-                    <textarea name="text" id="tweet-textarea" placeholder="What are you humming about?"></textarea>
-                    <div class="tweeter-btn-counter">
-                        <button type="submit" id="tweet-btn">Tweet</button>
-                        <output name="counter" class="counter" for="tweet-text">140</output>
-                    </div>
-
-                    <article class="tweet-article">
-                        <header class="tweet-header">
-                            <div>
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                maram
-                            </div>
-                            <div class="item-at-name">
-                                @maram
-                            </div>
-                        </header>
-                        <div>
-                            if i have seen further it is by standing on shoulder of a giants
-                        </div>
-
-                        <hr>
-                        <footer class="tweet-footer">
-                            <div class="days-counter">
-                                ten days ago
-                            </div>
-                            <div class="footer-elements">
-                                <i class="fas fa-flag"></i>
-                                <i class="fas fa-retweet"></i>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </footer>
-                    </article>
+                <textarea name="text" id="tweet-textarea" placeholder="What are you humming about?"></textarea>
+                <div class="tweeter-btn-counter">
+                    <button type="submit" id="tweet-btn">Tweet</button>
+                    <output name="counter" class="counter" for="tweet-text">140</output>
                 </div>
             </form>
+        </section>
+        <section class="tweets-container">
+
         </section>
     </main>
 

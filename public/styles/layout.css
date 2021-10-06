@@ -22,7 +22,7 @@ html {
 body {
     color: #545149;
     background-color: #f4f1ec;
-    /* font-family: Source Sans Pro, sans-serif; */
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 
@@ -32,29 +32,39 @@ body {
 
 main {
     display: flex;
-    width: 90%;
     align-items: center;
     background-color: #f4f1ec;
     margin-top: 150px;
 }
 
-article .tweet-header {
+.tweet-article .tweet-header {
     background-color: #f4f1ec;
 }
 
-article .tweet-footer {
+.tweet-article .tweet-footer {
     background-color: #f4f1ec;
 }
 
-article {
+.tweet-article {
     border: solid;
     transition: box-shadow .3s;
+    margin: 1em;
+    padding: 1em;
+    width: 40em;
 }
 
-article:hover {
-    box-shadow: 0 0 11px rgba(40, 40, 40, .2);
+.tweet-article:hover {
+    box-shadow: 5px 5px 0 rgba(40, 40, 40, .2);
 }
 
 .footer-elements i:hover {
     color: rgb(211, 148, 236);
+}
+
+.tweet-header .img-container {
+    max-width: 40px;
+}
+
+.tweet-header img {
+    width: 100%;
 }
