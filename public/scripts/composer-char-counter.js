@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     $('#tweet-textarea').keyup(() => {
         const tweetlength = $('#tweet-textarea').val().length;
-        console.log(tweetlength);
+        //console.log(tweetlength);
         $('.counter').text(140 - tweetlength);
 
     })
