@@ -66,4 +66,18 @@ hr {
 
 .tweet-footer {
     display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.footer-elements {
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.days-counte {
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
 }
