@@ -3,11 +3,11 @@ $(document).ready(function() {
     //console.log( "ready!" );
 
     $('#tweet-textarea').keyup(() => {
-        const tweetlength = $('#tweet-textarea').val().length;
-        //console.log(tweetlength);
-        $('.counter').text(140 - tweetlength);
+            const tweetlength = $('#tweet-textarea').val().length;
+            //console.log(tweetlength);
+            $('.counter').text(140 - tweetlength);
 
-    })
-    timeago.render(document.querySelectorAll('.timeago'));
+        })
+        //timeago.render(document.querySelectorAll('.timeago'));
 
 });

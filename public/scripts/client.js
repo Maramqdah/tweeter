@@ -42,7 +42,13 @@ $(() => {
     const $form = $(".new-tweet-form");
     $form.on("submit", function(event) {
         event.preventDefault();
-        console.log('form was submitted');
+        const tweetlength = $('#tweet-textarea').val().length;
+        const text = $('#tweet-textarea').val();
+        if (tweetlength > 140) {
+            alert("exceed limit");
+        } else if (tweetlength === 0 || text.trim() === "") {
+            alert("empty space")
+        }
         const serializedData = $(this).serialize();
         console.log("serialized", serializedData)
 
