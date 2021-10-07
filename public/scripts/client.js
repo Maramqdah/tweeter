@@ -31,9 +31,11 @@ $(() => {
 
 
     const renderTweets = function(tweets) {
+        // clear out tweet-container
+
         for (const tweet of tweets) {
             const $tweet = createTweetElement(tweet);
-            $('.tweets-container').append($tweet);
+            $('.tweets-container').prepend($tweet);
         }
 
     }
@@ -51,6 +53,13 @@ $(() => {
         }
         const serializedData = $(this).serialize();
         console.log("serialized", serializedData)
+        $.post("/tweets", serializedData, (response) => {
+            console.log(response)
+            loadTweets();
+
+        })
+        $('#tweet-textarea').val('');
+
 
     })
 
