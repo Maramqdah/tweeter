@@ -22,7 +22,7 @@ $(() => {
                 </div>
                 <hr>
                 <footer class="tweet-footer">
-                    <div class="timeago">${tweet.created_at}</div>
+                    <div class="timeago">${timeago.format(tweet.created_at)}</div>
                     <div class="footer-elements">
                         <i class="fas fa-flag"></i>
                         <i class="fas fa-retweet"></i>

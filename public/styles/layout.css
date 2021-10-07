@@ -68,3 +68,19 @@ main {
 .tweet-header img {
     width: 100%;
 }
+
+#header-main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    #header-main-container {
+        display: flex;
+        flex-direction: row;
+    }
+    #main-header {
+        max-width: 28vw;
+        max-height: 54vh;
+    }
+}
