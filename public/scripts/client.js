@@ -45,28 +45,49 @@ $(() => {
 
     }
 
+    const $input = $('#tweet-textarea');
+    const erroAlert = $('.error-msg');
+    const $errorDiv = $('.validation-error')
+    $input.on("input", function(event) {
 
+        erroAlert.text("");
+        $errorDiv.addClass('hide');
+
+
+    })
     const $form = $(".new-tweet-form");
+
     $form.on("submit", function(event) {
+
         event.preventDefault();
+        const erroAlert = $('.error-msg');
         const tweetlength = $('#tweet-textarea').val().length;
         const text = $('#tweet-textarea').val();
         // tweet validation
         if (tweetlength > 140) {
-            alert("exceed limit");
+            // alert.("exceed limit");
+            $errorDiv.removeClass('hide');
+            erroAlert.text("exceed limit");
         } else if (tweetlength === 0 || text.trim() === "") {
-            alert("empty space")
+            $errorDiv.removeClass('hide');
+            erroAlert.text("Empty Tweet");
+            //console.log(erroAlert);
         }
 
         // tweet serialization
-        const serializedData = $(this).serialize();
-        console.log("serialized", serializedData)
-        $.post("/tweets", serializedData, (response) => {
-            console.log(response)
-            loadTweets();
+        else {
+            const serializedData = $(this).serialize();
+            console.log("serialized", serializedData)
+            $.post("/tweets", serializedData, (response) => {
+                console.log(response)
+                loadTweets();
 
-        })
-        $('#tweet-textarea').val('');
+
+            })
+
+            $('#tweet-textarea').val('');
+        }
+
 
 
     })

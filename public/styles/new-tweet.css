@@ -28,7 +28,15 @@
     border-bottom-width: 3px;
 }
 
-.tweeter-btn-counter {
-    display: flex;
-    justify-content: space-between;
+.validation-error {
+    border: 2px solid red;
+    margin-bottom: 2%;
+}
+
+.error-msg {
+    color: red;
+}
+
+.hide {
+    display: none;
 }
