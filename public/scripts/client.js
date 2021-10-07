@@ -4,8 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(() => {
-
+    // tweet fix XSS
     const createTweetElement = function(tweet) {
+        const escape = function(str) {
+            let div = document.createElement("div");
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        };
         const $tweet = $(`<article class="tweet-article">
                 <header class="tweet-header">
                     <div class="img-container"><img src="${tweet.user.avatars}" alt="user avatar"/></div>
@@ -13,7 +18,7 @@ $(() => {
                     <div class="handle">${tweet.user.handle}</div>
                 </header>
                 <div>
-                ${tweet.content.text}
+                ${escape(tweet.content.text)}
                 </div>
                 <hr>
                 <footer class="tweet-footer">
@@ -46,11 +51,14 @@ $(() => {
         event.preventDefault();
         const tweetlength = $('#tweet-textarea').val().length;
         const text = $('#tweet-textarea').val();
+        // tweet validation
         if (tweetlength > 140) {
             alert("exceed limit");
         } else if (tweetlength === 0 || text.trim() === "") {
             alert("empty space")
         }
+
+        // tweet serialization
         const serializedData = $(this).serialize();
         console.log("serialized", serializedData)
         $.post("/tweets", serializedData, (response) => {
