@@ -5,7 +5,7 @@ Tweeter is a simple, single-page Twitter front-end application.
 
 ## Final Product
 
-https://github.com/Maramqdah/tweeter/blob/master/Docs/tweeter.png?raw=true
+(https://github.com/Maramqdah/tweeter/blob/master/Docs/tweeter.png?raw=true)
 
 ## Getting Started
 
